@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    tools:context="dgu.dyeon.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_weight="1">
+       <android.support.v4.widget.SwipeRefreshLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:id="@+id/swipeRefresh">
+
+           <WebView
+               android:id="@+id/fullscreen_content"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:background="@drawable/splash"
+               android:focusable="true"
+               android:focusableInTouchMode="true"
+               />
+       </android.support.v4.widget.SwipeRefreshLayout>
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fullscreen_content_controls"
+        style="?metaButtonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="13"
+        android:background="#9acd32"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_back"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/forward"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_forward"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/reload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_refresh"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_home"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/mypage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_my"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9acd32"
+            android:src="@drawable/ic_table"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
